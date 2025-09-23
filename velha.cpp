@@ -6,6 +6,7 @@
 #include <bits/stdc++.h>
 #define IS_X 1
 #define IS_O 2
+#define CAN_PLACE_MARK 0
 /**
  * @brief verifica situacao do jogo da velha
  * @author Programador
@@ -44,4 +45,16 @@ bool isImpossible(int game[3][3]) {
     }
   }
   return abs(countO - countX) <= 1 ? true : false;
+}
+
+bool isFinishedw(int game[3][3]) {
+
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (game[i][j] == CAN_PLACE_MARK) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
