@@ -27,7 +27,7 @@ int VerificaVelha(int velha[3][3]) {
   }
   return Winner(velha);
 }
-bool isDraw(int game[3][3]) { return VerificaVelha(game) == 0 ? true : false; }
+bool isDraw(int game[3][3]) { return Winner(game) == 0 ? true : false; }
 bool isImpossible(int game[3][3]) {
   int countX = 0;
   int countO = 0;
