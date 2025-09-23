@@ -1,7 +1,7 @@
 
 #define CATCH_CONFIG_MAIN
-#include "catch_amalgamated.hpp"
-#include "velha.hpp"
+#include "./catch_amalgamated.hpp"
+#include "./velha.hpp"
 #define VENCEDOR_X 1
 #define VENCEDOR_O 2
 TEST_CASE("Testa velha", "[single-file]") {
