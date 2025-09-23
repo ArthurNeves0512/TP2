@@ -12,11 +12,11 @@ TEST_CASE("Testa velha", "[valido]") {
 }
 TEST_CASE("Testa empate", "[valido]") {
   int teste_empate[3][3] = {{1, 2, 1}, {2, 1, 2}, {1, 1, 2}};
-  CHECK(isDraw(teste_empate));
+  CHECK(IsDraw(teste_empate));
 }
 TEST_CASE("Testa impossivel", "[invalido]") {
   int teste_impossivel[3][3] = {{1, 2, 1}, {1, 1, 2}, {1, 1, 2}};
-  CHECK(isImpossible(teste_impossivel));
+  CHECK(IsImpossible(teste_impossivel));
 }
 TEST_CASE("Testa ganhador", "[valido]") {
   int teste_X[3][3] = {{1, 1, 1}, {2, 0, 1}, {0, 2, 1}};
@@ -24,5 +24,5 @@ TEST_CASE("Testa ganhador", "[valido]") {
 }
 TEST_CASE("Testa termino", "[valido]") {
   int game_not_ended[3][3] = {{0, 1, 1}, {2, 0, 1}, {0, 2, 1}};
-  CHECK(isFinishedw(game_not_ended));
+  CHECK(IsFinishedw(game_not_ended));
 }
