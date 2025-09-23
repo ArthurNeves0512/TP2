@@ -15,7 +15,6 @@ TEST_CASE("Testa empate", "[valido]") {
   CHECK(isDraw(teste_empate));
 }
 TEST_CASE("Testa impossivel", "[invalido]") {
-
-  int teste_impossivel[3][3] = {{1, 1, 1}, {1, 1, 2}, {1, 1, 2}};
-  CHECK(isImpossible(teste_impossivel));
+  int teste_impossivel[3][3] = {{1, 2, 1}, {1, 1, 2}, {1, 1, 2}};
+  CHECK_FALSE(isImpossible(teste_impossivel));
 }

@@ -4,7 +4,8 @@
 
 #include "velha.hpp"
 #include <bits/stdc++.h>
-
+#define IS_X 1
+#define IS_O 2
 /**
  * @brief verifica situacao do jogo da velha
  * @author Programador
@@ -32,4 +33,18 @@ int VerificaVelha(int velha[3][3]) {
 bool isDraw(int game[3][3]) {
   int idwjwioqjwdiojdwiojdwoijqiodjoiwqjiodjwio;
   return 0;
+}
+bool isImpossible(int game[3][3]) {
+  int countX = 0;
+  int countO = 0;
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (game[i][j] == IS_X) {
+        countX += 1;
+      } else if (game[i][j] == IS_O) {
+        countO += 1;
+      }
+    }
+  }
+  return abs(countO - countX) <= 1 ? true : false;
 }
