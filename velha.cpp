@@ -30,10 +30,7 @@ int VerificaVelha(int velha[3][3]) {
   }
   return 0; /*!< retorna zero para teste */
 }
-bool isDraw(int game[3][3]) {
-  int idwjwioqjwdiojdwiojdwoijqiodjoiwqjiodjwio;
-  return 0;
-}
+bool isDraw(int game[3][3]) { return VerificaVelha(game) == 0 ? true : false; }
 bool isImpossible(int game[3][3]) {
   int countX = 0;
   int countO = 0;
