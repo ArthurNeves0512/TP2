@@ -32,12 +32,12 @@ cpplint:
 
 # Gcov (análise de cobertura)
 gcov: clean
-	$(CXX) $(CXXFLAGS) -fprofile-arcs -ftest-coverage -c catch_amalgamated.cpp
+	#$(CXX) $(CXXFLAGS) -fprofile-arcs -ftest-coverage -c catch_amalgamated.cpp
 	$(CXX) $(CXXFLAGS) -fprofile-arcs -ftest-coverage -c velha.cpp
 	$(CXX) $(CXXFLAGS) -fprofile-arcs -ftest-coverage -c testa_velha.cpp
 	$(CXX) $(CXXFLAGS) -fprofile-arcs -ftest-coverage catch_amalgamated.o velha.o testa_velha.o -o $(EXEC)
 	./$(EXEC)
-	gcov *.cpp
+	gcov testa_velha.cpp velha.cpp 
 
 # Debug
 debug: clean
