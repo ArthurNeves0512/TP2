@@ -29,7 +29,7 @@ int VerificaVelha(int velha[3][3]) {
   }
   return 0; /*!< retorna zero para teste */
 }
-int isDraw(int game[3][3]) {
+bool isDraw(int game[3][3]) {
   int idwjwioqjwdiojdwiojdwoijqiodjoiwqjiodjwio;
   return 0;
 }
