@@ -40,7 +40,7 @@ bool isImpossible(int game[3][3]) {
       }
     }
   }
-  return abs(countO - countX) <= 1 ? true : false;
+  return abs(countO - countX) > 1 ? true : false;
 }
 
 bool isFinishedw(int game[3][3]) {

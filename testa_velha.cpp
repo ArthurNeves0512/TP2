@@ -16,7 +16,7 @@ TEST_CASE("Testa empate", "[valido]") {
 }
 TEST_CASE("Testa impossivel", "[invalido]") {
   int teste_impossivel[3][3] = {{1, 2, 1}, {1, 1, 2}, {1, 1, 2}};
-  CHECK_FALSE(isImpossible(teste_impossivel));
+  CHECK(isImpossible(teste_impossivel));
 }
 TEST_CASE("Testa ganhador", "[valido]") {
   int teste_X[3][3] = {{1, 1, 1}, {2, 0, 1}, {0, 2, 1}};
