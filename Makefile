@@ -28,7 +28,7 @@ valgrind: $(EXEC)
 
 # Lint com cpplint (ignora catch)
 cpplint:
-	cpplint --exclude=catch_amalgamated.hpp *.cpp *.hpp
+	cpplint --exclude=catch_amalgamated.hpp testa_velha.cpp velha.hpp
 
 # Gcov (análise de cobertura)
 gcov: clean
