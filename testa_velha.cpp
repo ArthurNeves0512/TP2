@@ -10,3 +10,7 @@ TEST_CASE("Testa velha", "[single-file]") {
   REQUIRE(VerificaVelha(teste_X) == VENCEDOR_X);
   REQUIRE(VerificaVelha(teste_0) == VENCEDOR_O);
 }
+TEST_CASE("Testa empate", "[valido]") {
+  int teste_empate[3][3] = {{1, 2, 1}, {2, 1, 2}, {1, 1, 2}};
+  REQUIRE(isDraw(teste_empate) == 0);
+}
