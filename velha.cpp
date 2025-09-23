@@ -9,10 +9,10 @@
 #define CAN_PLACE_MARK 0
 /**
  * @brief verifica situacao do jogo da velha
- * @author Programador
- * @param  velha descreve o parametro
+ * @author Arthur Neves
+ * @param  game is the game grid
  *
- *  Descrever o que a funcao faz
+ *  Check all condictions and return the actual status of the board
  */
 using namespace std;
 int VerificaVelha(int velha[3][3]) {
@@ -29,7 +29,7 @@ int VerificaVelha(int velha[3][3]) {
       (velha[2][2] == velha[0][2] && velha[2][2] == velha[1][1])) {
     return velha[1][1];
   }
-  return 0; /*!< retorna zero para teste */
+  return 0;
 }
 bool isDraw(int game[3][3]) { return VerificaVelha(game) == 0 ? true : false; }
 bool isImpossible(int game[3][3]) {
@@ -58,3 +58,4 @@ bool isFinishedw(int game[3][3]) {
   }
   return false;
 }
+int Winner(int velha[3][3]) {}

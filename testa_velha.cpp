@@ -4,7 +4,7 @@
 #include "./velha.hpp"
 #define VENCEDOR_X 1
 #define VENCEDOR_O 2
-TEST_CASE("Testa velha", "[single-file]") {
+TEST_CASE("Testa velha", "[valido]") {
   int teste_X[3][3] = {{1, 1, 1}, {2, 0, 1}, {0, 2, 1}};
   int teste_0[3][3] = {{2, 2, 2}, {1, 1, 0}, {0, 0, 0}};
   REQUIRE(VerificaVelha(teste_X) == VENCEDOR_X);
@@ -23,7 +23,6 @@ TEST_CASE("Testa ganhador", "[valido]") {
   REQUIRE(VerificaVelha(teste_X) == VENCEDOR_X);
 }
 TEST_CASE("Testa termino", "[valido]") {
-
   int game_not_ended[3][3] = {{0, 1, 1}, {2, 0, 1}, {0, 2, 1}};
   CHECK(isFinishedw(game_not_ended));
 }
