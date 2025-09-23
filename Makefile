@@ -2,7 +2,7 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
-# Arquivos
+# Arquivos, Aqui temo apenas uma variavel definida no make como uma string
 SRC = catch_amalgamated.cpp velha.cpp testa_velha.cpp
 OBJ = $(SRC:.cpp=.o)
 EXEC = testa_velha
