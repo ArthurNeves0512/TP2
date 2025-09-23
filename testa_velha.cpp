@@ -14,3 +14,8 @@ TEST_CASE("Testa empate", "[valido]") {
   int teste_empate[3][3] = {{1, 2, 1}, {2, 1, 2}, {1, 1, 2}};
   REQUIRE(isDraw(teste_empate) == 0);
 }
+TEST_CASE("Testa impossivel", "[invalido]") {
+
+  int teste_impossivel[3][3] = {{1, 1, 1}, {1, 1, 2}, {1, 1, 2}};
+  CHECK(isImpossible(teste_impossivel));
+}
