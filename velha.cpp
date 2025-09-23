@@ -17,6 +17,7 @@
 using namespace std;
 int VerificaVelha(int velha[3][3]) {
   if (isImpossible(velha)) {
+    cout << "sou impossivel";
     return -2;
   }
   if (!isFinishedw(velha)) {

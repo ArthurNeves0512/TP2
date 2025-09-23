@@ -5,7 +5,7 @@
 #define VENCEDOR_X 1
 #define VENCEDOR_O 2
 TEST_CASE("Testa velha", "[valido]") {
-  int teste_X[3][3] = {{1, 1, 1}, {2, 0, 1}, {0, 2, 1}};
+  int teste_X[3][3] = {{1, 1, 1}, {2, 0, 0}, {0, 2, 0}};
   int teste_0[3][3] = {{2, 2, 2}, {1, 1, 0}, {0, 0, 0}};
   REQUIRE(VerificaVelha(teste_X) == VENCEDOR_X);
   REQUIRE(VerificaVelha(teste_0) == VENCEDOR_O);
