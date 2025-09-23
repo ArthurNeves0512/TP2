@@ -20,7 +20,7 @@ TEST_CASE("Testa impossivel", "[invalido]") {
 }
 TEST_CASE("Testa ganhador", "[valido]") {
   int teste_X[3][3] = {{1, 1, 1}, {2, 0, 1}, {0, 2, 1}};
-  REQUIRE(VerificaVelha(teste_X) == VENCEDOR_X);
+  REQUIRE(Winner(teste_X) == VENCEDOR_X);
 }
 TEST_CASE("Testa termino", "[valido]") {
   int game_not_ended[3][3] = {{0, 1, 1}, {2, 0, 1}, {0, 2, 1}};
