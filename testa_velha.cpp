@@ -25,4 +25,5 @@ TEST_CASE("Testa ganhador", "[valido]") {
 TEST_CASE("Testa termino", "[valido]") {
 
   int jogo_nao_terminado[3][3] = {{0, 1, 1}, {2, 0, 1}, {0, 2, 1}};
+  isFinishedw(jogo_nao_terminado);
 }
