@@ -10,26 +10,26 @@
 /**
  * @brief verifica situacao do jogo da velha
  * @author Arthur Neves
- * @param  game is the game grid
+ * @param  game Is the game grid
  *
  *  Check all condictions and return the actual status of the board
  */
 using namespace std;
 int VerificaVelha(int velha[3][3]) {
-  if (isImpossible(velha)) {
+  if (IsImpossible(velha)) {
     cout << "sou impossivel";
     return -2;
   }
-  if (!isFinishedw(velha)) {
+  if (!IsFinishedw(velha)) {
     return -1;
   }
-  if (isDraw(velha)) {
+  if (IsDraw(velha)) {
     return 0;
   }
   return Winner(velha);
 }
-bool isDraw(int game[3][3]) { return Winner(game) == 0 ? true : false; }
-bool isImpossible(int game[3][3]) {
+bool IsDraw(int game[3][3]) { return Winner(game) == 0 ? true : false; }
+bool IsImpossible(int game[3][3]) {
   int countX = 0;
   int countO = 0;
   for (int i = 0; i < 3; i++) {
@@ -44,7 +44,7 @@ bool isImpossible(int game[3][3]) {
   return abs(countO - countX) > 1 ? true : false;
 }
 
-bool isFinishedw(int game[3][3]) {
+bool IsFinishedw(int game[3][3]) {
 
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
