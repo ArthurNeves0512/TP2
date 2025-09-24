@@ -1,6 +1,6 @@
-﻿com o g++  make e demais programas instalados 
-com todos os arquivos no mesmo diretório
-digite "make" neste diretório 
-para cada regra você pode digitar make e nome da regra ex. make cppcheck
+﻿com o g++ e make instalados e também a biblioteca cpplint baixados.
+Para baixar o cpplint utilizei o comando:
+pip install cpplint
 
-fazer um git commit para cada teste ou código adicionado 
+e para rodar os comandos de teste e checagem, voce utilizara a palavra "make" seguida
+dos comandos definidos no makefile como "make test"
