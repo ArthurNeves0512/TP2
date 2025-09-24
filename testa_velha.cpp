@@ -7,8 +7,8 @@
 TEST_CASE("Testa velha", "[valido]") {
   int teste_X[3][3] = {{1, 1, 1}, {2, 0, 0}, {0, 2, 0}};
   int teste_0[3][3] = {{2, 2, 2}, {1, 1, 0}, {0, 0, 0}};
-  REQUIRE(VerificaVelha(teste_X) == VENCEDOR_X);
-  REQUIRE(VerificaVelha(teste_0) == VENCEDOR_O);
+  REQUIRE(GameVerify(teste_X) == VENCEDOR_X);
+  REQUIRE(GameVerify(teste_0) == VENCEDOR_O);
 }
 TEST_CASE("Testa empate", "[valido]") {
   int teste_empate[3][3] = {{1, 2, 1}, {2, 1, 2}, {1, 1, 2}};
