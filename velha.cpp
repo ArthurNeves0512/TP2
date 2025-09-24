@@ -15,7 +15,7 @@
  *  Check all condictions and return the actual status of the board
  */
 using namespace std;
-int Verificagame(int game[3][3]) {
+int GameVerify(int game[3][3]) {
   if (IsImpossible(game)) {
     return -2;
   }
