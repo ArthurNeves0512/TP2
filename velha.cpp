@@ -1,5 +1,5 @@
 /**
- * \file  velha.cpp
+ * \file  game.cpp
  */
 
 #include "velha.hpp"
@@ -8,25 +8,24 @@
 #define IS_O 2
 #define CAN_PLACE_MARK 0
 /**
- * @brief verifica situacao do jogo da velha
+ * @brief verifica situacao do jogo da game
  * @author Arthur Neves
  * @param  game Is the game grid
  *
  *  Check all condictions and return the actual status of the board
  */
 using namespace std;
-int VerificaVelha(int velha[3][3]) {
-  if (IsImpossible(velha)) {
-    cout << "sou impossivel";
+int Verificagame(int game[3][3]) {
+  if (IsImpossible(game)) {
     return -2;
   }
-  if (!IsFinishedw(velha)) {
+  if (!IsFinishedw(game)) {
     return -1;
   }
-  if (IsDraw(velha)) {
+  if (IsDraw(game)) {
     return 0;
   }
-  return Winner(velha);
+  return Winner(game);
 }
 bool IsDraw(int game[3][3]) { return Winner(game) == 0 ? true : false; }
 bool IsImpossible(int game[3][3]) {
@@ -55,20 +54,19 @@ bool IsFinishedw(int game[3][3]) {
   }
   return false;
 }
-int Winner(int velha[3][3]) {
+int Winner(int game[3][3]) {
 
   for (int i = 0; i < 3; i++) {
     bool horizontal_match =
-        velha[i][0] == velha[i][1] && velha[i][0] == velha[i][2];
-    bool vertical_match =
-        velha[0][i] == velha[1][i] && velha[0][i] == velha[2][i];
+        game[i][0] == game[i][1] && game[i][0] == game[i][2];
+    bool vertical_match = game[0][i] == game[1][i] && game[0][i] == game[2][i];
     if (horizontal_match || vertical_match) {
-      return velha[i][0];
+      return game[i][0];
     }
   }
-  if ((velha[0][0] == velha[1][1] && velha[1][1] == velha[2][2]) ||
-      (velha[2][2] == velha[0][2] && velha[2][2] == velha[1][1])) {
-    return velha[1][1];
+  if ((game[0][0] == game[1][1] && game[1][1] == game[2][2]) ||
+      (game[2][2] == game[0][2] && game[2][2] == game[1][1])) {
+    return game[1][1];
   }
   return 0;
 }
